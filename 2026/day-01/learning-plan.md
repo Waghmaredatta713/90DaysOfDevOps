@@ -1,8 +1,8 @@
 90DaysOfDevOps
 
-Name: Dattatray Waghmare
-Current Level: Beginner in DevOps (Working Professional)
-Location: Pune
+-Name: Dattatray Waghmare
+-Current Level: Beginner in DevOps (Working Professional)
+-Location: Pune
 
 Q: What is your understanding of DevOps and Cloud Engineering?
 
