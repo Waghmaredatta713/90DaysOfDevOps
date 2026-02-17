@@ -18,7 +18,7 @@ Ans: I want to grow in my career and i want to switch my Job
 
 Q: Where do you want to reach?
 
-Ans: In the next 90 days, I want to build a strong foundation in DevOps. I want to feel confident with Linux, Git, Docker, and basic CI/CD. 
+Ans: In the next 90 days, I want to build a strong foundation in DevOps. I want to feel confident in DevOps all Tools.
 
 
 Q: How you will stay consistent every single day?
