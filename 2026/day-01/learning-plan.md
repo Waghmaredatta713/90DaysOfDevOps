@@ -6,6 +6,9 @@
 
 -Location: Pune
 
+
+
+
 Q: What is your understanding of DevOps and Cloud Engineering?
 
 DevOps is a way of working where development and operations teams work together to deliver software faster and safely. It helps in automation, reducing errors, and making systems stable.
