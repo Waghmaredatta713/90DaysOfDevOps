@@ -1,4 +1,4 @@
-# 90DaysOfDevOps
+90DaysOfDevOps
 
 Name: Dattatray Waghmare
 Current Level: Beginner in DevOps (Working Professional)
@@ -6,37 +6,36 @@ Location: Pune
 
 Q: What is your understanding of DevOps and Cloud Engineering?
 
-Ans: DevOps is a way of working where developers and operations teams work together to deliver software faster and more safely. It helps in automating tasks, reducing errors, and making systems stable.
-Cloud Engineering means using cloud platforms like AWS to run applications and manage servers instead of using physical machines. It makes systems flexible and easy to scale.
-I understand that DevOps is not only about tools. It is about Culture, mindset, automation, Communication and continuous learning.
+DevOps is a way of working where development and operations teams work together to deliver software faster and safely. It helps in automation, reducing errors, and making systems stable.
+Cloud Engineering means using cloud platforms like AWS to run applications and manage servers instead of physical machines. It helps in scaling systems easily and managing infrastructure better.
+I understand that DevOps is not only about tools. It is about culture, mindset, communication, automation, and continuous learning.
 
 
-Q. Why I Am Starting DevOps
 
-Ans: I want to grow in my career and i want to switch my Job
+Q: Why Am I Starting DevOps?
 
-
-Q: Where do you want to reach?
-
-Ans: In the next 90 days, I want to build a strong foundation in DevOps. I want to feel confident in DevOps all Tools.
+I want to grow in my career and switch to a DevOps role. I want to learn modern technologies that companies are using today. I also want better career growth and technical skills.
 
 
-Q: How you will stay consistent every single day?
 
-Ans: I will practice DevOps for 2–3 hours every day at a fixed time and treat it seriously. I will not skip any day, but if I miss one by mistake, I will complete the work the next day without excuses. I will focus more on hands-on practice
+Q: Where Do You Want to Reach?
+
+In the next 90 days, I want to build a strong foundation in DevOps. I want to understand the full DevOps process clearly and feel confident using basic tools like Linux, Git, Docker, and CI/CD.
+In the future, I want to become a DevOps Engineer who can handle deployments and solve problems independently.
 
 
-My 90-Day Goals:
 
-1. Understand DevOps clearly from the basics.
-   
-I want to understand how the full DevOps process works. I don’t want to just learn tools. I want to understand the overall framework and how everything connects.
+Q: How Will You Stay Consistent Every Single Day?
 
-3. Practice regularly and improve step by step.
-   
-I will practice every day and repeat important concepts. I will try things on my system instead of only watching videos. My goal is to become comfortable with Linux, Git, Docker, and CI/CD through continuous practice.
+I will study and practice for 2–3 hours every day at a fixed time. I will not skip any day. If I miss one day by mistake, I will complete the work the next day.
+I will focus more on hands-on practice instead of only watching videos. I will upload my work on GitHub and track my progress.
+Even if I feel tired, I will study something small. Consistency is more important than motivation.
 
-5. Learn to troubleshoot and solve problems by myself.
-   
-By the end of 90 days, I want to be able to read error messages, check logs, and try to fix issues on my own. I know I am a beginner, but I want to build confidence to handle basic incidents independently.
 
+
+My 90-Day Goals
+
+Understand DevOps clearly from the basics and learn how the full process works.
+Practice daily and become comfortable with Linux, Git, Docker, and CI/CD.
+Learn to read logs, understand errors, and try to solve basic problems by myself.
+My goal is not to become perfect in 90 days, but to build strong basics and improve step by step.
