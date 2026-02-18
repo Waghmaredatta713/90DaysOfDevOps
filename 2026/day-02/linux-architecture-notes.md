@@ -3,24 +3,25 @@
 **Linux Architecture:**
 
 **Users / Applications**  -  These are people or systems interacting with Linux.
-                         (Example - You typing commands)
+                         **Example - You typing commands)**
 
         |
         |
 
 **Shell**  -  The shell is the bridge between user and kernel.
-           (Example - bash)
+           **(Example - bash)**
 
         |
         |
 
-**Kernel**  -  Heart of Linux (Brain). Only kernel knows how to talk to hardware.
+**Kernel**  -  Heart of Linux **(Brain)**. Only kernel knows how to talk to hardware.
 
         |
         |
 
 **Hardware**  -  Physical devices.
-              (Example - CPU, RAM, Disk)
+              **(Example - CPU, RAM, Disk)**
+
 
 
 
