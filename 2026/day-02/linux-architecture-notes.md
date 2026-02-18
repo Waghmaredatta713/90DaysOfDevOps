@@ -3,7 +3,7 @@
 **Linux Architecture:**
 
 **Users / Applications**  -  These are people or systems interacting with Linux.
-                         **Example - You typing commands)**
+                         **(Example - You typing commands)**
 
         |
         |
@@ -85,10 +85,14 @@ systemd is the manager of your Linux system. When the system starts, systemd is 
 
 **5 Commands I Use Daily**
 
-**top**				:	Live view of CPU and memory usage.
+**top**					:	Live view of CPU and memory usage.
+
 **htop**				:	Advanced and easier version of top.
+
 **systemctl status <service>**	:	Checks whether a service is running, failed, or restarting.
+
 **df -h**				:	Checks disk space usage in human-readable format.
-**free -m**			:	Shows memory usage in MB.
+
+**free -m**				:	Shows memory usage in MB.
 
 
