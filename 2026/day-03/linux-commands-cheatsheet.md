@@ -50,6 +50,40 @@
 | `ss -tulnp` | Modern alternative to `netstat` for checking open ports. |
 
 ---
+##  User Management
+
+| Command | Description |
+|----------|------------|
+| `whoami` | Display current logged-in user |
+| `groupadd` | Create a new group |
+| `usermod -aG gp1 ab1` | Add user `ab1` to group `gp1` |
+| `userdel` | Delete a user account |
+
+---
+
+##  Disk Usage
+
+| Command | Description |
+|----------|------------|
+| `df` | Display free disk space |
+| `du` | Show file/folder sizes on disk |
+| `du -h` | Display disk usage in human-readable format |
+| `free -m` | Display free and used memory in MB |
+| `du -sh` | Show total disk usage of current directory |
+
+---
+
+##  System Information
+
+| Command | Description |
+|----------|------------|
+| `uname -a` | Detailed Linux system information |
+| `uname -r` | Show kernel version |
+| `su` / `sudo` | Run command with superuser privileges |
+| `hostname` | Show system host name |
+| `man COMMAND` | Show manual page of a command (Press `q` to exit) |
+
+---
 
 ## Why This Matters for DevOps
 
