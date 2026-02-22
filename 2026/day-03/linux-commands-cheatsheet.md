@@ -85,6 +85,53 @@
 
 ---
 
+##  Linux File Permissions
+
+| Section | Description |
+|----------|------------|
+| File Structure | `-rwxr-xr--` → File type + User + Group + Others permissions |
+| User (u) | File owner permissions |
+| Group (g) | Group permissions |
+| Others (o) | All other users permissions |
+
+---
+
+###  Permission Types
+
+| Symbol | Meaning | Value |
+|----------|------------|-------|
+| `r` | Read | 4 |
+| `w` | Write | 2 |
+| `x` | Execute | 1 |
+| `-` | No permission | 0 |
+
+---
+
+###  Permission Numbers (Octal)
+
+| Number | Permission | Calculation |
+|----------|------------|-------------|
+| `7` | `rwx` | 4 + 2 + 1 |
+| `6` | `rw-` | 4 + 2 |
+| `5` | `r-x` | 4 + 1 |
+| `4` | `r--` | 4 |
+| `0` | `---` | 0 |
+
+---
+
+###  Common chmod Commands
+
+| Command | Description |
+|----------|------------|
+| `chmod 644 file.txt` | Owner: read/write, Group & Others: read only |
+| `chmod 755 script.sh` | Owner: full access, Group & Others: read/execute |
+| `chmod 777 file.txt` | Full access to everyone (⚠ Not recommended in production) |
+| `chmod u+x file.sh` | Add execute permission to user |
+| `chmod g-w file.txt` | Remove write permission from group |
+| `chmod o=r file.txt` | Set others to read-only |
+
+---
+
 ## Why This Matters for DevOps
 
 **Real production incidents are solved at the command line.**
