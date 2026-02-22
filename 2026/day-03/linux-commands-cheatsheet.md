@@ -40,7 +40,7 @@
 
 ---
 
-## 👤 User Management
+##  User Management
 
 | Command | Description |
 |----------|-------------|
