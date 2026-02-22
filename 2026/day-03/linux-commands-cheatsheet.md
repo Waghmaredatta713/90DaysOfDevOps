@@ -12,6 +12,13 @@
 
 ---
 
+##  𝗖𝗼𝗿𝗲 𝗟𝗶𝗻𝘂𝘅 𝗣𝗵𝗶𝗹𝗼𝘀𝗼𝗽𝗵𝘆
+
+  **“Everything in Linux is either a file or a directory.”**
+
+  **“Everything starts with a process.”**
+
+
 ##  Process Management
 
 | Command | Description |
