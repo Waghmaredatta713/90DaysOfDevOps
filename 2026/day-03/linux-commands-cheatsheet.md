@@ -1,4 +1,14 @@
-#  Linux Commands Cheat Sheet
+#  Linux Command Confidence – Cheat Sheet
+
+##  Today’s Goal
+
+**Build confidence in essential Linux commands used in real-world troubleshooting.**
+
+**This cheat sheet focuses on:**
+
+- Process Management  
+- File System Operations  
+- Networking Troubleshooting  
 
 ---
 
@@ -6,11 +16,11 @@
 
 | Command | Description |
 |----------|-------------|
-| `ps` | Show process status. Often used with `grep`. |
-| `ps -ef` | Print detailed process overview. |
-| `top` | Display sorted information about running processes. |
-| `kill PID` | Kill a process using its Process ID (PID). |
-| `htop` | Interactive process viewer with visual highlights. |
+| `ps` | Show process status. Often combined with `grep` to find specific processes. |
+| `ps -ef` | Display detailed information about all running processes. |
+| `top` | Real-time view of CPU and memory usage by processes. |
+| `htop` | Interactive and user-friendly process monitor. |
+| `kill PID` | Terminate a process using its Process ID (PID). |
 
 ---
 
@@ -18,57 +28,41 @@
 
 | Command | Description |
 |----------|-------------|
-| `ls` | List files and subfolders in the current directory. |
-| `ls -a` | Show hidden files and folders. |
-| `pwd` | Display current working directory path. |
-| `mv` | Move or rename a file. |
-| `cp` | Copy a file. |
-| `rm -r` | Recursively delete a directory. |
+| `ls -al` | List files (including hidden) with detailed permissions. |
+| `pwd` | Display the current working directory. |
+| `cd` | Change directory. |
+| `cp` | Copy files or directories. |
+| `mv` | Move or rename files. |
+| `rm -r` | Remove directories recursively. |
 | `cat` | View file contents. |
 
 ---
 
-##  Networking
+##  Networking Troubleshooting
 
 | Command | Description |
 |----------|-------------|
-| `ifconfig` | Display all network interfaces with IP addresses. |
-| `ping host` | Test connectivity using ICMP echo request. |
-| `netstat -nutlp` | Show listening TCP/UDP ports and programs. |
-| `curl LINK` | Display the HTML source of a URL. |
-| `tcpdump` | Capture live network packets. |
+| `ip a` | Display IP addresses of all network interfaces. |
+| `ping host` | Test network connectivity to a host. |
+| `netstat -nutlp` | Show listening TCP/UDP ports and associated services. |
+| `curl URL` | Test HTTP/HTTPS response from a service. |
+| `tcpdump` | Capture live network traffic for deeper debugging. |
+| `ss -tulnp` | Modern alternative to `netstat` for checking open ports. |
 
 ---
 
-##  User Management
+## Why This Matters for DevOps
 
-| Command | Description |
-|----------|-------------|
-| `whoami` | Show current logged-in user. |
-| `groupadd` | Create a new group. |
-| `usermod -aG gp1 ab1` | Add user `ab1` to group `gp1`. |
-| `userdel` | Delete a user account. |
+**Real production incidents are solved at the command line.**
 
----
+**When something breaks, you must quickly:**
 
-##  Disk Usage
+- Identify failing processes  
+- Verify file paths and permissions  
+- Check open ports and services  
+- Confirm network connectivity  
+- Validate application responses  
 
-| Command | Description |
-|----------|-------------|
-| `df` | Display free disk space. |
-| `du` | Show file/folder disk usage. |
-| `du -h` | Display disk usage in human-readable format. |
-| `free -m` | Display free and used memory in MB. |
-| `du -sh` | Show total disk usage of current directory. |
-
----
-
-##  System Information
-
-| Command | Description |
-|----------|-------------|
-| `uname -a` | Display detailed Linux system information. |
-| `uname -r` | Show kernel version. |
-| `su` / `sudo` | Run commands with superuser privileges. |
-| `hostname` | Show system host name. |
-| `man COMMAND` | Display manual page for a command (press `q` to exit). |
+**The faster you diagnose →**  
+**The faster you restore service →**  
+**The more trust you build as an operator.**
