@@ -9,8 +9,6 @@ As part of my #90DaysOfDevOps journey, today I practiced Linux processes and sys
 Command:
 ps
 
-![ps basic output](ps-basic.png)
-
 This command shows processes running in the current terminal session.
 
 Observation:
@@ -26,7 +24,6 @@ Without options, `ps` only shows processes related to the current session.
 Command:
 ps aux
 
-![ps aux output](ps-aux.png)
 
 This shows all running processes in the system.
 
@@ -48,7 +45,6 @@ Important columns:
 Command:
 top
 
-![top output](top-output.png)
 
 Shows real-time system performance.
 
@@ -74,7 +70,6 @@ Confirms nginx is running correctly (master + worker processes).
 Command:
 systemctl status ssh
 
-![systemctl ssh output](systemctl-ssh.png)
 
 Shows:
 - Service state: active (running)
@@ -101,7 +96,6 @@ Shows active system services and their status.
 Command:
 journalctl -u ssh
 
-![journalctl ssh output](journalctl-ssh.png)
 
 Shows:
 - SSH start logs
@@ -115,8 +109,6 @@ Shows:
 
 Command:
 tail -n 50 /var/log/syslog
-
-![syslog output](syslog-output.png)
 
 Shows last 50 lines of system log including:
 - Service logs
