@@ -1,6 +1,14 @@
-# Day 04 – Linux Processes & Services (Hands-on Practice)
+# Day 04 – Linux Processes & Services 
 
-As part of my #90DaysOfDevOps journey, today I practiced Linux processes and systemd by running real commands on my server and observing the output.
+**Task**
+
+Today’s goal is to practice Linux fundamentals with real commands.
+
+You will create a short practice note by actually running basic commands and capturing what you see:
+
+    Check running processes
+    Inspect one systemd service
+    Capture a small troubleshooting flow
 
 ---
 
