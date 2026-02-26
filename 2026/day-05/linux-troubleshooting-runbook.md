@@ -16,7 +16,7 @@ This runbook documents a structured troubleshooting drill covering:
 # 1️⃣ Environment Basics
 
 ## 🔹 uname -a
-![uname](images/uname.png)
+![uname](./images/uname.png)
 
 - Linux → OS Kernel  
 - AWS optimized kernel  
