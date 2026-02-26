@@ -1,78 +1,97 @@
 # 📘 Day 05 – Linux Troubleshooting Drill  
 ## 🎯 Target Service: Docker (`docker.service`)
 
+This runbook documents a structured troubleshooting drill covering:
+
+- Environment validation  
+- Filesystem sanity  
+- CPU & Memory  
+- Disk & Storage  
+- Network  
+- Logs & Service health  
+- Escalation strategy  
+
 ---
 
 # 1️⃣ Environment Basics
 
 ## 🔹 uname -a
-![uname](images/01-uname.png)
+![uname](images/uname.png)
 
 - Linux → OS Kernel  
 - AWS optimized kernel  
-- x86_64 → 64-bit  
+- x86_64 → 64-bit architecture  
 
 ---
 
 ## 🔹 cat /etc/os-release
-![os-release](images/02-os-release.png)
+![os-release](images/os-release.png)
 
 - Ubuntu 24.04.3 LTS  
 - Noble Numbat  
-- Debian-based  
+- Debian-based system  
 
 ---
 
-# 2️⃣ Filesystem Sanity
+# 2️⃣ Filesystem Sanity Check
 
 ## 🔹 mkdir + cp + ls
-![filesystem](images/03-filesystem.png)
+![filesystem](images/filesystem.png)
 
-- Directory created  
-- File copied  
+- Directory created successfully  
+- File copied without errors  
 - Normal permissions  
 
 ---
 
-# 3️⃣ CPU & Memory
+# 3️⃣ CPU & Memory Analysis
 
 ## 🔹 top
-![top](images/04-top.png)
+![top](images/top.png)
 
-- Load average low  
+- Load average very low  
 - CPU mostly idle  
-- Memory available healthy  
+- No system pressure  
+
+---
+
+## 🔹 htop
+![htop](images/htop.png)
+
+- containerd running normally  
+- No high CPU processes  
 
 ---
 
 ## 🔹 ps -C dockerd
-![ps-docker](images/05-ps-docker.png)
+![ps-docker](images/ps-docker.png)
 
-- Docker CPU low  
+- Docker CPU usage near 0%  
 - Memory usage stable  
 
 ---
 
 ## 🔹 free -h
-![free](images/06-free.png)
+![free](images/free.png)
 
-- Available memory > 500MB  
-- No swap used  
+- Available memory ~516MB  
+- No swap usage  
 
 ---
 
 ## 🔹 vmstat
-![vmstat](images/07-vmstat.png)
+![vmstat](images/vmstat.png)
 
 - No swapping  
 - No IO wait  
+- CPU idle  
 
 ---
 
 # 4️⃣ Disk & Storage
 
 ## 🔹 df -h
-![df](images/08-df.png)
+![df](images/df.png)
 
 - Root usage 38%  
 - Enough free space  
@@ -80,59 +99,62 @@
 ---
 
 ## 🔹 du -sh /var/lib/docker
-![docker-size](images/09-docker-size.png)
+![docker-size](images/docker-size.png)
 
 - Docker storage ~2.4GB  
 
 ---
 
 ## 🔹 du -sh /var/log
-![var-log](images/10-var-log.png)
+![var-log](images/var-log.png)
 
 - Logs ~67MB  
+- No log overflow  
 
 ---
 
-# 5️⃣ Network
+# 5️⃣ Network Check
 
 ## 🔹 ss -tulpn
-![ss](images/11-ss.png)
+![ss](images/ss.png)
 
 - Port 80 → nginx  
 - Port 22 → SSH  
+- containerd local socket  
 
 ---
 
 ## 🔹 curl -I http://localhost
-![curl](images/12-curl.png)
+![curl](images/curl.png)
 
-- HTTP 200 OK  
-- nginx running  
+- HTTP/1.1 200 OK  
+- nginx responding properly  
 
 ---
 
-# 6️⃣ Logs & Service
+# 6️⃣ Logs & Service Status
 
 ## 🔹 systemctl status docker
-![systemctl](images/13-systemctl.png)
+![systemctl](images/systemctl.png)
 
 - Active: running  
-- Memory ~57MB  
+- Memory usage ~57MB  
 
 ---
 
 ## 🔹 journalctl -u docker -n 50
-![journalctl](images/14-journalctl.png)
+![journalctl](images/journalctl.png)
 
-- No critical errors  
-- Docker initialized properly  
+- Docker initialized correctly  
+- No fatal errors  
+- Only non-critical warnings  
 
 ---
 
-# 🔎 Final Status
+# 🔎 Final Health Summary
 
-| Component | Result |
-|------------|--------|
+| Component | Status |
+|-----------|--------|
 | CPU | Healthy |
 | Memory | Healthy |
 | Disk | Safe |
@@ -142,31 +164,56 @@
 
 ---
 
-# 🚨 Escalation Steps
+# 🚨 Escalation Plan
 
-## 1️⃣ docker stats
+## 1️⃣ Check Container Usage
+
 ```
 docker stats
 ```
-Use to check container resource usage.
+
+Use when container consumes high CPU or memory.
+
+---
 
 ## 2️⃣ Restart Docker
+
 ```
 systemctl restart docker
 ```
-Use when daemon unresponsive.
+
+Use when:
+- Docker daemon unresponsive  
+- Containers fail unexpectedly  
+
+---
 
 ## 3️⃣ Inspect Container
+
 ```
 docker inspect <container_id>
 ```
 
-## 4️⃣ Deep Debug
-```
-pidof dockerd
-strace -p <pid>
-```
+Provides:
+- Restart policy  
+- Environment variables  
+- Network configuration  
+- Error states  
 
 ---
 
-⭐ #90DaysOfDevOps
+## 4️⃣ Deep Debug (Process-Level)
+
+```
+pidof dockerd
+strace -p <dockerd_pid>
+```
+
+Use when:
+- Docker stuck  
+- High CPU without clear reason  
+- Suspected system-level issue  
+
+---
+
+⭐ Part of #90DaysOfDevOps
