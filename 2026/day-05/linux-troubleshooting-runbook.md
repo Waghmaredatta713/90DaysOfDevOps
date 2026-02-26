@@ -1,225 +1,172 @@
+# 📘 Day 05 – Linux Troubleshooting Drill  
+## 🎯 Target Service: Docker (`docker.service`)
 
 ---
 
 # 1️⃣ Environment Basics
 
-## 🔹 uname -a  
-📸 Image: `images/uname.png`
+## 🔹 uname -a
+![uname](images/01-uname.png)
 
-![uname](images/uname.png)
-
-### 🔎 How to Read It
 - Linux → OS Kernel  
-- ip-172-31-20-201 → Hostname  
-- 6.17.0-1007-aws → AWS optimized kernel  
-- x86_64 → 64-bit architecture  
-
-✅ System running Ubuntu 24.04 (AWS kernel, 64-bit).
+- AWS optimized kernel  
+- x86_64 → 64-bit  
 
 ---
 
-## 🔹 cat /etc/os-release  
-📸 Image: `images/os-release.png`
+## 🔹 cat /etc/os-release
+![os-release](images/02-os-release.png)
 
-![os-release](images/os-release.png)
-
-### 🔎 Observations
 - Ubuntu 24.04.3 LTS  
-- Codename: Noble  
-- Debian-based distribution  
-
-✅ Stable production-ready OS.
+- Noble Numbat  
+- Debian-based  
 
 ---
 
-# 2️⃣ Filesystem Sanity Check
+# 2️⃣ Filesystem Sanity
 
-## 🔹 mkdir + cp + ls  
-📸 Image: `images/filesystem.png`
+## 🔹 mkdir + cp + ls
+![filesystem](images/03-filesystem.png)
 
-![filesystem](images/filesystem.png)
-
-### 🔎 Observations
-- Directory created successfully  
-- File copied without error  
-- Normal permissions (`-rw-r--r--`)  
-
-✅ Filesystem writable and healthy.
+- Directory created  
+- File copied  
+- Normal permissions  
 
 ---
 
-# 3️⃣ CPU & Memory Analysis
+# 3️⃣ CPU & Memory
 
-## 🔹 top  
-📸 Image: `images/top.png`
+## 🔹 top
+![top](images/04-top.png)
 
-![top](images/top.png)
-
-### 🔎 Key Metrics
-- Load Average: ~0.02  
-- CPU Idle: ~95%  
-- Available Memory: ~516MB  
-
-✅ No performance pressure.
-
----
-
-## 🔹 ps -o pid,pcpu,pmem,comm -C dockerd  
-📸 Image: `images/ps-docker.png`
-
-![ps-docker](images/ps-docker.png)
-
-### 🔎 Observations
-- Docker CPU usage: 0%  
-- Memory usage: ~4%  
-
-✅ Docker daemon stable.
-
----
-
-## 🔹 free -h  
-📸 Image: `images/free.png`
-
-![free](images/free.png)
-
-### 🔎 Observations
-- Total Memory: 911MB  
-- Available: 516MB  
-- Swap Used: 0B  
-
-✅ No memory exhaustion.
-
----
-
-## 🔹 vmstat  
-📸 Image: `images/vmstat.png`
-
-![vmstat](images/vmstat.png)
-
-### 🔎 Observations
-- No swapping (si/so = 0)  
-- No IO wait  
+- Load average low  
 - CPU mostly idle  
+- Memory available healthy  
 
-✅ No bottlenecks detected.
+---
+
+## 🔹 ps -C dockerd
+![ps-docker](images/05-ps-docker.png)
+
+- Docker CPU low  
+- Memory usage stable  
+
+---
+
+## 🔹 free -h
+![free](images/06-free.png)
+
+- Available memory > 500MB  
+- No swap used  
+
+---
+
+## 🔹 vmstat
+![vmstat](images/07-vmstat.png)
+
+- No swapping  
+- No IO wait  
 
 ---
 
 # 4️⃣ Disk & Storage
 
-## 🔹 df -h  
-📸 Image: `images/df.png`
+## 🔹 df -h
+![df](images/08-df.png)
 
-![df](images/df.png)
-
-### 🔎 Observations
-- Root usage: 38%  
-- 8.5GB available  
-
-✅ Disk usage safe.
+- Root usage 38%  
+- Enough free space  
 
 ---
 
-## 🔹 du -sh /var/lib/docker  
-📸 Image: `images/docker-size.png`
+## 🔹 du -sh /var/lib/docker
+![docker-size](images/09-docker-size.png)
 
-![docker-size](images/docker-size.png)
-
-- Docker storage: 2.4GB  
-
-✅ Normal container storage usage.
+- Docker storage ~2.4GB  
 
 ---
 
-## 🔹 du -sh /var/log  
-📸 Image: `images/var-log.png`
+## 🔹 du -sh /var/log
+![var-log](images/10-var-log.png)
 
-![var-log](images/var-log.png)
-
-- Log directory size: 67MB  
-
-✅ No excessive log growth.
+- Logs ~67MB  
 
 ---
 
-# 5️⃣ Network Check
+# 5️⃣ Network
 
-## 🔹 ss -tulpn  
-📸 Image: `images/ss.png`
+## 🔹 ss -tulpn
+![ss](images/11-ss.png)
 
-![ss](images/ss.png)
-
-### 🔎 Observations
 - Port 80 → nginx  
 - Port 22 → SSH  
-- containerd local socket  
-
-✅ Only expected services listening.
 
 ---
 
-## 🔹 curl -I http://localhost  
-📸 Image: `images/curl.png`
+## 🔹 curl -I http://localhost
+![curl](images/12-curl.png)
 
-![curl](images/curl.png)
-
-### 🔎 Observations
-- HTTP/1.1 200 OK  
-- nginx 1.24 active  
-
-✅ Web service responding correctly.
+- HTTP 200 OK  
+- nginx running  
 
 ---
 
-# 6️⃣ Logs & Service Status
+# 6️⃣ Logs & Service
 
-## 🔹 systemctl status docker  
-📸 Image: `images/systemctl.png`
+## 🔹 systemctl status docker
+![systemctl](images/13-systemctl.png)
 
-![systemctl](images/systemctl.png)
-
-### 🔎 Observations
 - Active: running  
-- Memory usage: ~57MB  
-
-✅ Docker service healthy.
+- Memory ~57MB  
 
 ---
 
-## 🔹 journalctl -u docker -n 50  
-📸 Image: `images/journalctl.png`
+## 🔹 journalctl -u docker -n 50
+![journalctl](images/14-journalctl.png)
 
-![journalctl](images/journalctl.png)
-
-### 🔎 Observations
-- Docker daemon initialized  
-- containerd started  
 - No critical errors  
-
-✅ Logs clean.
+- Docker initialized properly  
 
 ---
 
-# 🔎 Final Health Summary
+# 🔎 Final Status
 
-| Component | Status |
-|-----------|--------|
+| Component | Result |
+|------------|--------|
 | CPU | Healthy |
 | Memory | Healthy |
-| Disk | Healthy |
+| Disk | Safe |
 | Docker | Running |
-| Network | Normal |
+| Network | OK |
 | Logs | Clean |
 
 ---
 
-# 🚨 If This Worsens (Escalation Plan)
+# 🚨 Escalation Steps
 
-If Docker shows high CPU usage, memory pressure, container crashes, or repeated errors:
+## 1️⃣ docker stats
+```
+docker stats
+```
+Use to check container resource usage.
+
+## 2️⃣ Restart Docker
+```
+systemctl restart docker
+```
+Use when daemon unresponsive.
+
+## 3️⃣ Inspect Container
+```
+docker inspect <container_id>
+```
+
+## 4️⃣ Deep Debug
+```
+pidof dockerd
+strace -p <pid>
+```
 
 ---
 
-## 1️⃣ Check Container Resource Usage
-
-```bash
-docker stats
+⭐ #90DaysOfDevOps
