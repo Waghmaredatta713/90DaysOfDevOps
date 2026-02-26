@@ -1,7 +1,20 @@
 **90DaysOfDevOps**
 
-# 📘 Day 05 – Linux Troubleshooting Drill  
-## 🎯 Target Service: Docker (`docker.service`)
+# 📝 Task
+
+**Today’s goal was to run a focused troubleshooting drill.**
+
+I selected a running system service (**Docker Engine**) and performed the following:
+
+- Captured a quick health snapshot (CPU, memory, disk, network)
+- Reviewed service logs
+- Analyzed service state
+- Created a mini runbook for incident response
+
+---
+
+#  Day 05 – Linux Troubleshooting Drill  
+##  Target Service: Docker (`docker.service`)
 
 This runbook documents a structured troubleshooting drill covering:
 
@@ -233,4 +246,16 @@ Use when:
 
 ---
 
-⭐ Part of #90DaysOfDevOps
+#  Why This Matters for DevOps
+
+**Incidents rarely come with perfect clues. A fast, repeatable checklist saves minutes when services misbehave.**
+
+**This drill builds:**
+
+- Habit of capturing evidence before acting  
+- Confidence reading resource signals (CPU, memory, disk, network)  
+- Log-first mindset before restarts or escalations  
+
+These habits reduce downtime and prevent guesswork in production.
+
+---
