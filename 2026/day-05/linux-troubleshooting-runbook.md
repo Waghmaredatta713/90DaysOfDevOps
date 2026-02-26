@@ -1,6 +1,8 @@
 **90DaysOfDevOps**
 
-# 📝 Task
+#  Day 05 – Linux Troubleshooting Drill  
+
+#  Task
 
 **Today’s goal was to run a focused troubleshooting drill.**
 
@@ -194,7 +196,7 @@ This runbook documents a structured troubleshooting drill covering:
 
 ---
 
-# 🚨 Escalation Plan
+#  Escalation Plan
 
 ## 1️⃣ Check Container Usage
 
