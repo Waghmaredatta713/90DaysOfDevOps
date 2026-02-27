@@ -1,1 +1,108 @@
+# 🚀 Day 06 – Linux Fundamentals: Read & Write Text Files
 
+As part of my **#90DaysOfDevOps** journey, today I practiced basic Linux file handling using redirection, tee, cat, head, and tail commands.
+
+---
+
+# 🟢 Stage 1 – File Creation & Initial Write
+
+## 🧑‍💻 Commands Used
+
+```bash
+ls
+echo "this is my linux practice notes" > notes.txt
+echo "today we are practicing basic read and write commands" >> notes.txt
+cat notes.txt
+```
+
+## 📖 Explanation
+
+- `ls` → Lists files in the current directory.
+- `>` → Creates or overwrites `notes.txt`.
+- `>>` → Appends new content to the file.
+- `cat` → Displays the complete file content.
+
+## 📸 Screenshot
+
+<p align="center">
+  <img src="images/01_file_create_initial_write.png" width="800">
+</p>
+
+---
+
+# 🟢 Stage 2 – Using tee Command
+
+## 🧑‍💻 Commands Used
+
+```bash
+echo "Using tee to write and display output" | tee -a notes.txt
+cat notes.txt
+```
+
+## 📖 Explanation
+
+- `tee -a` → Appends content to the file.
+- It also displays the output in the terminal.
+- `cat` verifies the updated file content.
+
+## 📸 Screenshot
+
+<p align="center">
+  <img src="images/02_using_tee_command.png" width="800">
+</p>
+
+---
+
+# 🟢 Stage 3 – Appending Multiple Lines & Final Verification
+
+## 🧑‍💻 Commands Used
+
+```bash
+echo "Learning how to use echo and save output to a file" >> notes.txt
+echo "practicing how to view file content using cat" >> notes.txt
+echo "practicing how to see the first few lines of a file using head" >> notes.txt
+echo "practicing how to see the last few lines of a file using tail" >> notes.txt
+echo "regular Linux practice improves skills" >> notes.txt
+
+cat notes.txt
+head -n 2 notes.txt
+tail -n 2 notes.txt
+```
+
+## 📖 Explanation
+
+- Multiple `>>` commands appended new lines.
+- `cat` displays the complete file.
+- `head -n 2` shows the first two lines.
+- `tail -n 2` shows the last two lines.
+
+## 📸 Screenshot
+
+<p align="center">
+  <img src="images/03_appending_multiple_lines_final_output.png" width="800">
+</p>
+
+---
+
+# 📚 Commands Summary
+
+| Command | Purpose |
+|----------|----------|
+| `ls` | List files in directory |
+| `>` | Overwrite or create file |
+| `>>` | Append content |
+| `tee -a` | Append + display output |
+| `cat` | Read full file |
+| `head -n` | Read first lines |
+| `tail -n` | Read last lines |
+
+---
+
+# ✅ Learning Outcome
+
+- Understood overwrite vs append
+- Practiced file creation and modification
+- Used tee effectively
+- Strengthened Linux command-line fundamentals
+
+**Linux basics strong = DevOps foundation strong 💪**
