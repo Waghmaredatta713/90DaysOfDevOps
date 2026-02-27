@@ -48,6 +48,7 @@ echo "today we are practicing basic read and write commands" >> notes.txt
 
 ```bash
 echo "Using tee to write and display output" | tee -a notes.txt
+cat notes.txt
 ```
 
 ### 🔎 What This Does
@@ -75,6 +76,7 @@ echo "practicing how to see the first few lines of a file using head" >> notes.t
 echo "practicing how to see the last few lines of a file using tail" >> notes.txt
 echo "regular Linux practice improves skills" >> notes.txt
 
+cat notes.tst
 head -n 2 notes.txt
 tail -n 2 notes.txt
 ```
