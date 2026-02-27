@@ -38,7 +38,7 @@ cat notes.txt
 ### 🖼️ Output Screenshot
 
 <p align="center">
-  <img src="images/01_Appending Multiple Lines + Final Output.png" width="900">
+  <img src="images/01_appending-multiple-lines-final-output.png">
 </p>
 
 ---
@@ -61,7 +61,7 @@ cat notes.txt
 ### 🖼️ Output Screenshot
 
 <p align="center">
-  <img src="images/02_using_tee_command.png" width="900">
+  <img src="images/02_using-tee-command.png">
 </p>
 
 ---
@@ -92,7 +92,7 @@ tail -n 2 notes.txt
 ### 🖼️ Output Screenshot
 
 <p align="center">
-  <img src="images/03_appending_multiple_lines_final_output.png" width="900">
+  <img src="images/03_file-create-initial-write.png">
 </p>
 
 ---
