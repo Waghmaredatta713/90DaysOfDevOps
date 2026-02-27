@@ -125,10 +125,10 @@ tail -n 2 notes.txt
 
 #  Learning Outcome
 
-✔ Clear understanding of file redirection  
-✔ Practical difference between overwrite and append  
-✔ Proper verification of file content  
-✔ Strengthened Linux fundamentals  
+ Clear understanding of file redirection  
+ Practical difference between overwrite and append  
+ Proper verification of file content  
+ Strengthened Linux fundamentals  
 
 ---
 
