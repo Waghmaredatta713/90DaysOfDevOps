@@ -1,10 +1,28 @@
-# 📘 Day 06 – Linux File Handling Practice
+# Day 06 – Linux Fundamentals: Read and Write Text Files
+
+# Task
+
+**This is a continuation of Day 05, but much simpler.**
+
+Today’s goal is to practice basic file read/write using only fundamental commands.
+
+You will create a small text file and practice:
+
+    Creating a file
+    Writing text to a file
+    Appending new lines
+    Reading the file back
+
+
+
+
+#  Day 06 – Linux File Handling Practice
 
 This document records a structured practice session focused on basic Linux file operations.
 
 ---
 
-## 📌 Objective
+##  Objective
 
 This practice covers:
 
@@ -28,7 +46,7 @@ echo "today we are practicing basic read and write commands" >> notes.txt
 cat notes.txt
 ```
 
-### 🔎 What This Does
+###  What This Does
 
 - `ls` → Lists files in the working directory.
 - `>` → Creates or overwrites the file.
@@ -52,7 +70,7 @@ echo "Using tee to write and display output" | tee -a notes.txt
 cat notes.txt
 ```
 
-### 🔎 What This Does
+###  What This Does
 
 - `tee -a` → Appends content to file.
 - Simultaneously prints output to terminal.
@@ -82,14 +100,14 @@ head -n 2 notes.txt
 tail -n 2 notes.txt
 ```
 
-### 🔎 What This Does
+###  What This Does
 
 - Appends multiple lines using `>>`
 - `cat` → Shows complete file
 - `head -n 2` → Displays first two lines
 - `tail -n 2` → Displays last two lines
 
-### 🖼️ Output Screenshot
+###  Output Screenshot
 
 <p align="center">
   <img src="images/file-create-initial-write.png">
@@ -111,7 +129,7 @@ tail -n 2 notes.txt
 
 ---
 
-# ✅ Learning Outcome
+#  Learning Outcome
 
 ✔ Clear understanding of file redirection  
 ✔ Practical difference between overwrite and append  
@@ -120,4 +138,11 @@ tail -n 2 notes.txt
 
 ---
 
-📅 Part of **#90DaysOfDevOps**
+# Why This Matters for DevOps
+
+Reading and writing files is a daily task in DevOps.
+
+Logs, configs, and scripts are all text files.
+If you can handle files quickly, you can debug and automate faster.
+
+---
