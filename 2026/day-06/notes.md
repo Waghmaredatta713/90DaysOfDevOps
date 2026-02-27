@@ -38,7 +38,7 @@ cat notes.txt
 ### 🖼️ Output Screenshot
 
 <p align="center">
-  <img src="images/01_file_create_initial_write.png" width="900">
+  <img src="images/01_Appending Multiple Lines + Final Output.png" width="900">
 </p>
 
 ---
