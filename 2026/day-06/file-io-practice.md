@@ -25,6 +25,7 @@ This practice covers:
 ls
 echo "this is my linux practice notes" > notes.txt
 echo "today we are practicing basic read and write commands" >> notes.txt
+cat notes.txt
 ```
 
 ### 🔎 What This Does
