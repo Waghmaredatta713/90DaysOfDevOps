@@ -47,7 +47,7 @@ cat notes.txt
 - `>>` → Appends new data to existing file.
 - `cat` → Displays the entire file content.
 
-### 🖼️ Output Screenshot
+###  Output Screenshot
 
 <p align="center">
   <img src="images/appending-multiple-lines-final-output.png">
@@ -70,7 +70,7 @@ cat notes.txt
 - Simultaneously prints output to terminal.
 - `cat` confirms updated file content.
 
-### 🖼️ Output Screenshot
+###  Output Screenshot
 
 <p align="center">
   <img src="images/using-tee-command.png">
@@ -109,7 +109,7 @@ tail -n 2 notes.txt
 
 ---
 
-# 📊 Command Summary
+# Command Summary
 
 | Command | Purpose |
 |----------|----------|
