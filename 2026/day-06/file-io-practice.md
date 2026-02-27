@@ -14,12 +14,6 @@ You will create a small text file and practice:
     Reading the file back
 
 
-
-
-#  Day 06 – Linux File Handling Practice
-
-This document records a structured practice session focused on basic Linux file operations.
-
 ---
 
 ##  Objective
