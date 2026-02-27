@@ -1,12 +1,25 @@
-# 🚀 Day 06 – Linux Fundamentals: Read & Write Text Files
+# 📘 Day 06 – Linux File Handling Practice
 
-As part of my **#90DaysOfDevOps** journey, today I practiced basic Linux file handling using redirection, tee, cat, head, and tail commands.
+This document records a structured practice session focused on basic Linux file operations.
 
 ---
 
-# 🟢 Stage 1 – File Creation & Initial Write
+## 📌 Objective
 
-## 🧑‍💻 Commands Used
+This practice covers:
+
+- File creation
+- Overwriting vs appending
+- Reading full file content
+- Viewing partial content
+- Using `tee` command
+- Verifying outputs
+
+---
+
+# 1️⃣ File Creation & Initial Write
+
+### 🔹 Commands Executed
 
 ```bash
 ls
@@ -15,47 +28,47 @@ echo "today we are practicing basic read and write commands" >> notes.txt
 cat notes.txt
 ```
 
-## 📖 Explanation
+### 🔎 What This Does
 
-- `ls` → Lists files in the current directory.
-- `>` → Creates or overwrites `notes.txt`.
-- `>>` → Appends new content to the file.
-- `cat` → Displays the complete file content.
+- `ls` → Lists files in the working directory.
+- `>` → Creates or overwrites the file.
+- `>>` → Appends new data to existing file.
+- `cat` → Displays the entire file content.
 
-## 📸 Screenshot
+### 🖼️ Output Screenshot
 
 <p align="center">
-  <img src="images/01_file_create_initial_write.png" width="800">
+  <img src="images/01_file_create_initial_write.png" width="900">
 </p>
 
 ---
 
-# 🟢 Stage 2 – Using tee Command
+# 2️⃣ Using tee (Append + Display)
 
-## 🧑‍💻 Commands Used
+### 🔹 Commands Executed
 
 ```bash
 echo "Using tee to write and display output" | tee -a notes.txt
 cat notes.txt
 ```
 
-## 📖 Explanation
+### 🔎 What This Does
 
-- `tee -a` → Appends content to the file.
-- It also displays the output in the terminal.
-- `cat` verifies the updated file content.
+- `tee -a` → Appends content to file.
+- Simultaneously prints output to terminal.
+- `cat` confirms updated file content.
 
-## 📸 Screenshot
+### 🖼️ Output Screenshot
 
 <p align="center">
-  <img src="images/02_using_tee_command.png" width="800">
+  <img src="images/02_using_tee_command.png" width="900">
 </p>
 
 ---
 
-# 🟢 Stage 3 – Appending Multiple Lines & Final Verification
+# 3️⃣ Multiple Append & Final Verification
 
-## 🧑‍💻 Commands Used
+### 🔹 Commands Executed
 
 ```bash
 echo "Learning how to use echo and save output to a file" >> notes.txt
@@ -69,40 +82,42 @@ head -n 2 notes.txt
 tail -n 2 notes.txt
 ```
 
-## 📖 Explanation
+### 🔎 What This Does
 
-- Multiple `>>` commands appended new lines.
-- `cat` displays the complete file.
-- `head -n 2` shows the first two lines.
-- `tail -n 2` shows the last two lines.
+- Appends multiple lines using `>>`
+- `cat` → Shows complete file
+- `head -n 2` → Displays first two lines
+- `tail -n 2` → Displays last two lines
 
-## 📸 Screenshot
+### 🖼️ Output Screenshot
 
 <p align="center">
-  <img src="images/03_appending_multiple_lines_final_output.png" width="800">
+  <img src="images/03_appending_multiple_lines_final_output.png" width="900">
 </p>
 
 ---
 
-# 📚 Commands Summary
+# 📊 Command Summary
 
 | Command | Purpose |
 |----------|----------|
-| `ls` | List files in directory |
+| `ls` | List directory files |
 | `>` | Overwrite or create file |
-| `>>` | Append content |
-| `tee -a` | Append + display output |
-| `cat` | Read full file |
-| `head -n` | Read first lines |
-| `tail -n` | Read last lines |
+| `>>` | Append to file |
+| `tee -a` | Append + display |
+| `cat` | Show full file |
+| `head -n` | Show first lines |
+| `tail -n` | Show last lines |
 
 ---
 
 # ✅ Learning Outcome
 
-- Understood overwrite vs append
-- Practiced file creation and modification
-- Used tee effectively
-- Strengthened Linux command-line fundamentals
+✔ Clear understanding of file redirection  
+✔ Practical difference between overwrite and append  
+✔ Proper verification of file content  
+✔ Strengthened Linux fundamentals  
 
-**Linux basics strong = DevOps foundation strong 💪**
+---
+
+📅 Part of **#90DaysOfDevOps**
