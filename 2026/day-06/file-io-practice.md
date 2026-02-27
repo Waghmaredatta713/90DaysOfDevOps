@@ -89,7 +89,7 @@ echo "practicing how to see the first few lines of a file using head" >> notes.t
 echo "practicing how to see the last few lines of a file using tail" >> notes.txt
 echo "regular Linux practice improves skills" >> notes.txt
 
-cat notes.tst
+cat notes.txt
 head -n 2 notes.txt
 tail -n 2 notes.txt
 ```
