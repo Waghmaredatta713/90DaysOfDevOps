@@ -101,6 +101,76 @@ This document covers Linux file system structure, hands-on practice, and real-wo
 ```bash
 du -sh /var/log/* 2>/dev/null | sort -h | tail -5
 
+
+## 🖼️ **Output**
+
 <p align="center">
-  <img src="images/root-directory.png" width="900">
+  <img src="images/home-directory_1.png" width="900">
 </p>
+
+## **✅ What this does**
+
+- Shows file sizes
+- Hides permission errors
+- Sorts by size
+- Displays top 5 largest
+
+## 🧠 Learning
+Observation: /var/log/journal is largest
+Log files can fill disk space
+
+
+⚙️ 2. View System Configuration
+- Command: `cat /etc/hostname'
+
+## 🖼️ Output
+
+<p align="center">
+  <img src="images/home-directory_1.png" width="900">
+</p>
+
+## 🧠 Learning
+Hostname: **ip-172-31-74-169**
+Helps identify server
+
+## 🏠 3. Check Home Directory
+- Command: `ls -la ~'
+
+##🖼️ Output
+
+<p align="center">
+  <img src="images/home-directory_1.png" width="900">
+</p>
+
+## 🧠 Learning
+Hidden files: .bashrc, .profile, .ssh
+Stores user configs
+
+
+
+
+# 📘 Day 07 – Linux Troubleshooting (Nginx Scenario)
+
+This document demonstrates real-world troubleshooting of an Nginx service using standard Linux commands.
+
+---
+
+# 🌐 Scenario: Nginx Service Issue
+
+---
+
+## 🔹 Step 1: Check Service Status
+
+```bash
+systemctl status nginx
+
+<p align="center">
+  <img src="images/nginx-status.png" width="900">
+</p>
+
+Why:
+Check if the service is running, failed, or inactive
+
+
+
+
