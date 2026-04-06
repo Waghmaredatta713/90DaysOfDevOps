@@ -103,8 +103,16 @@ This document covers Linux file system structure, hands-on practice, and real-wo
 -Step 1: systemctl status nginx  
 Why: Check service state and initial error  
 
+<p align="center">
+  <img src="images/nginx-logs.png" width="900">
+</p>
+
 Step 2: journalctl -u nginx -n 50  
 Why: Identify root cause from logs  
+
+<p align="center">
+  <img src="images/nginx-verification.png" width="900">
+</p>
 
 Step 3: systemctl is-enabled nginx  
 Why: Verify auto-start configuration  
@@ -117,6 +125,10 @@ Why: Check if port is already in use
 
 Step 6: systemctl restart nginx  
 Why: Restart service after fixing issue  
+
+<p align="center">
+  <img src="images/nginx-status.png" width="900">
+</p>
 
 Step 7: systemctl status nginx  
 Why: Confirm service is running
@@ -131,6 +143,10 @@ Your manager reports that the application server is slow. You SSH into the serve
 
 ---
 
+<p align="center">
+  <img src="images/cpu-top.png" width="900">
+</p>
+
 step 1 : Use a command that shows CPU usage that is = **top**
 
 why :- shows live cpu usage and highlights the processes consuming 
@@ -141,12 +157,20 @@ step 2: Look for processes sorted by CPU percentage = **htop**
 why : - provides an interactive and clearer view of CPU usage sorted processes 
 and per core utilization
 
+<p align="center">
+  <img src="images/ps-cpu-usage.png" width="900">
+</p>
+
 step3 : **ps aux --sort=%cpu | head -10**
 
 why : lists the top CPU consuming processes in descending order to quickly 
 identify 
 
-step 4 : **ps -p <543> -o pid,ppid,%cpu,%mem,cmd**
+<p align="center">
+  <img src="images/process-details.png" width="900">
+</p>
+
+step 4 : **ps -p <543>**
 why : - inspects the identified process in details to understand what is causing high cpu usage
 
 ---
@@ -157,23 +181,31 @@ A developer asks: "Where are the logs for the 'docker' service?" The service is 
 
 ---
 
+<p align="center">
+  <img src="images/docker-status.png" width="900">
+</p>
 
 step 1 : **systemctl status docker**
 
 why : confirms wheteher the docker service is running and shows recent
  log snippets
- 
+
+ <p align="center">
+  <img src="images/docker-logs.png" width="900">
+</p>
+
 step 2: **journalctl -u docker -n 50**
 
 why : displays the last 50 log entries for docker service from systemd journal
 
+<p align="center">
+  <img src="images/docker-live-logs.png" width="900">
+</p>
+
 step 3: **journalctl -u docker -f** 
 
 why : follows docker logs in real time ( similar to tail -f ) for 
-live troubleshooting
-
-one line interview summary > for a systemd managed services like docker i use 
-journalctl -u docker to view and follow service logs.
+live troubleshooting.
 
 ---
 
