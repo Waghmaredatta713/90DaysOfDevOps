@@ -1,6 +1,6 @@
 # 📘 Day 07 – Linux File System & Troubleshooting Notes
 
-This document covers Linux file system structure, hands-on practice, and real-world DevOps troubleshooting scenarios.
+This document covers Linux file system structure, hands-on practice, and real-world troubleshooting scenarios.
 
 ---
 
@@ -9,71 +9,66 @@ This document covers Linux file system structure, hands-on practice, and real-wo
 ## 📁 / (Root Directory)
 
 <p align="center">
-  <img src="root-directory.png" width="900">
+  <img src="images/root-directory.png" width="900">
 </p>
 
 - Top-level directory of Linux  
 - Everything starts from here  
 - Command: `ls -l /`  
 - Example: home, etc, var  
-- Use Case: Explore full system  
 
 ---
 
 ## 📁 /home
 
 <p align="center">
-  <img src="home-directory.png" width="900">
+  <img src="images/home-directory.png" width="900">
 </p>
 
 - Stores user directories  
 - Command: `ls -l /home`  
 - Example: ubuntu, datta  
-- Use Case: User data access  
 
 ---
 
 ## 📁 /root
 
 <p align="center">
-  <img src="root-directory.png" width="900">
+  <img src="images/root-directory.png" width="900">
 </p>
 
 - Root (admin) home  
 - Command: `ls -l /root`  
-- Use Case: Admin-level tasks  
 
 ---
 
 ## 📁 /etc
 
 <p align="center">
-  <img src="etc-directory.png" width="900">
+  <img src="images/etc-directory.png" width="900">
 </p>
 
 - Configuration files  
 - Command: `ls -l /etc`  
 - Example: hostname, passwd  
-- Use Case: Debug configs  
 
 ---
 
 ## 📁 /var/log
 
 <p align="center">
-  <img src="var-log.png" width="900">
+  <img src="images/var-log.png" width="900">
 </p>
 
 - System logs  
 - Command: `ls -l /var/log`  
-- Use Case: Troubleshooting  
 
 ---
 
 ## 📁 /tmp
 
 <p align="center">
-  <img src="tmp-directory.png" width="900">
+  <img src="images/tmp-directory.png" width="900">
 </p>
 
 - Temporary files  
@@ -84,12 +79,11 @@ This document covers Linux file system structure, hands-on practice, and real-wo
 ## 📁 /bin & /usr/bin
 
 <p align="center">
-  <img src="bin-usrbin.png" width="900">
+  <img src="images/bin-usrbin.png" width="900">
 </p>
 
 - System binaries  
 - Examples: ls, cp, mv, python3  
-- Use Case: Run commands  
 
 ---
 
