@@ -218,6 +218,10 @@ What commands would you use to fix this?
 
 ---
 
+<p align="center">
+  <img src="images/backup-sh.png" width="900">
+</p>
+
 step 1 : Check current permissions
 
 Command: **ls -l /home/user/backup.sh**
