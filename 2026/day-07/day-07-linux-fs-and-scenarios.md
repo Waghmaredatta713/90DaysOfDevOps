@@ -96,29 +96,32 @@ This document covers Linux file system structure, hands-on practice, and real-wo
 
 ## Example Scenario: Service Not Starting
 
-A web application service called 'myapp' failed to start after a server reboot. What commands would you run to diagnose the issue? Write at least 4 commands in order.
+<p align="center">
+  <img src="images/nginx-status.png" width="900">
+</p>
 
----
+-Step 1: systemctl status nginx  
+Why: Check service state and initial error  
 
-Step 1: systemctl status myapp
+Step 2: journalctl -u nginx -n 50  
+Why: Identify root cause from logs  
 
-Why: i will check the status of the service It shows if the service is 
-active, failed, or stopped
+Step 3: systemctl is-enabled nginx  
+Why: Verify auto-start configuration  
 
-Step 2: journalctl -u myapp -n 50
+Step 4: nginx -t  
+Why: Validate configuration syntax  
 
-Why: reviews recent logs to identify startup errors or missconfigurations
+Step 5: ss -tulnp | grep :80  
+Why: Check if port is already in use  
 
-step 3: systemctl is-enabled myapp
+Step 6: systemctl restart nginx  
+Why: Restart service after fixing issue  
 
-Why :   verifies whether the service enabled to start automatically on boot
+Step 7: systemctl status nginx  
+Why: Confirm service is running
 
-step 4:  systemctl restart myapp
-
-Why :   attempts to restart the service after identifying or fixing the issue
-
-step 5:  systemctl daemon-reload  ( interview bonus / optional follow up)
-Why :  reloads systemd configuration if the service unit file was modified
+What I learned: First check status, then logs, then configuration, then fix and restart.
 
 ---
 
