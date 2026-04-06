@@ -94,83 +94,110 @@ This document covers Linux file system structure, hands-on practice, and real-wo
 
 ---
 
-# 🧪 Hands-on Tasks
+## Example Scenario: Service Not Starting
 
-## 🔍 1. Find Largest Log Files
-
-```bash
-du -sh /var/log/* 2>/dev/null | sort -h | tail -5
-
-
-## 🖼️ **Output**
-
-<p align="center">
-  <img src="images/home-directory_1.png" width="900">
-</p>
-
-## **✅ What this does**
-
-- Shows file sizes
-- Hides permission errors
-- Sorts by size
-- Displays top 5 largest
-
-## 🧠 Learning
-Observation: /var/log/journal is largest
-Log files can fill disk space
-
-
-⚙️ 2. View System Configuration
-- Command: `cat /etc/hostname'
-
-## 🖼️ Output
-
-<p align="center">
-  <img src="images/home-directory_1.png" width="900">
-</p>
-
-## 🧠 Learning
-Hostname: **ip-172-31-74-169**
-Helps identify server
-
-## 🏠 3. Check Home Directory
-- Command: `ls -la ~'
-
-##🖼️ Output
-
-<p align="center">
-  <img src="images/home-directory_1.png" width="900">
-</p>
-
-## 🧠 Learning
-Hidden files: .bashrc, .profile, .ssh
-Stores user configs
-
-
-
-
-# 📘 Day 07 – Linux Troubleshooting (Nginx Scenario)
-
-This document demonstrates real-world troubleshooting of an Nginx service using standard Linux commands.
+A web application service called 'myapp' failed to start after a server reboot. What commands would you run to diagnose the issue? Write at least 4 commands in order.
 
 ---
 
-# 🌐 Scenario: Nginx Service Issue
+
+---
+Step 1: systemctl status myapp
+Why: i will check the status of the service It shows if the service is 
+active, failed, or stopped
+
+Step 2: [journalctl -u myapp -n 50]
+Why: [reviews recent logs to identify startup errors or missconfigurations]
+
+step 3: systemctl is-enabled myapp
+Why :   verifies whether the service enabled to start automatically on boot
+
+step 4:  systemctl restart myapp
+Why :   attempts to restart the service after identifying or fixing the issue
+
+step 5:  systemctl daemon-reload  ( interview bonus / optional follow up)
+Why :  reloads systemd configuration if the service unit file was modified
 
 ---
 
-## 🔹 Step 1: Check Service Status
+---
 
-```bash
-systemctl status nginx
+## Scenario 2: High CPU Usage
 
-<p align="center">
-  <img src="images/nginx-status.png" width="900">
-</p>
+Your manager reports that the application server is slow. You SSH into the server. What commands would you run to identify which process is using high CPU?
 
-Why:
-Check if the service is running, failed, or inactive
+---
+
+---
+
+step 1 : Use a command that shows **live** CPU usage that is >> top
+why :- shows live cpu usage and highlights the processes consuming 
+highest cpu in real time
+
+step 2: Look for processes sorted by CPU percentage >> htop
+why : - provides an interactive and clearer view of CPU usage sorted processes 
+and per core utilization
+
+step3 : ps aux --sort=%cpu | head -10
+why : lists the top CPU consuming processes in descending order to quickly 
+identify 
+
+step 4 : ps -p <PID> -o pid,ppid,%cpu,%mem,cmd
+why : - inspects the identified process in details to understand what is causing high cpu usage
+
+---
+
+---
+
+## Scenario 3: Finding Service Logs
+
+A developer asks: "Where are the logs for the 'docker' service?" The service is managed by systemd. What commands would you use?
+
+---
 
 
+step 1 : systemctl status docker
+why : confirms wheteher the docker service is running and shows recent
+ log snippets
+ 
+step 2: journalctl -u docker -n 50
+why : displays the last 50 log entries for docker service from systemd journal
+
+step 3: journalctl -u docker -f 
+why : follows docker logs in real time ( similar to tail -f ) for 
+live troubleshooting
+
+one line interview summary > for a systemd managed services like docker i use 
+journalctl -u docker to view and follow service logs.
+
+---
 
 
+---
+
+## Scenario 4: File Permissions Issue
+
+A script at /home/user/backup.sh is not executing. When you run it: ./backup.sh You get: "Permission denied"
+
+What commands would you use to fix this?
+
+---
+
+---
+
+step 1 : Check current permissions
+Command: ls -l /home/user/backup.sh
+why : checks current file permissions to confirm execute (x) is missing
+
+step 2: Add execute permission
+Command: chmod +x /home/user/backup.sh
+why : adds execute permission so the script can run
+
+step 3 : Verify it worked
+Command: ls -l /home/user/backup.sh
+Look for: -rwxr-xr-x (notice 'x' = executable)
+
+Step 4: Try running it
+Command: ./backup.sh
+
+---
