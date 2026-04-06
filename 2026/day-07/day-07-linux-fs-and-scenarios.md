@@ -100,3 +100,7 @@ This document covers Linux file system structure, hands-on practice, and real-wo
 
 ```bash
 du -sh /var/log/* 2>/dev/null | sort -h | tail -5
+
+<p align="center">
+  <img src="images/root-directory.png" width="900">
+</p>
