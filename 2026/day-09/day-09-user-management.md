@@ -85,6 +85,7 @@ cat /etc/group | grep developers
 sudo usermod -aG developers tokyo
 
 sudo usermod -aG developers berlin
+
 sudo usermod -aG admins berlin
 
 sudo usermod -aG admins professor
@@ -102,7 +103,9 @@ groups professor
 ### 🔹 Create Shared Directory
 
 sudo mkdir -p /opt/dev-project
+
 sudo chgrp developers /opt/dev-project
+
 sudo chmod 775 /opt/dev-project
 
 ---
@@ -110,6 +113,7 @@ sudo chmod 775 /opt/dev-project
 ### 🔹 Test Shared Access
 
 sudo -u tokyo touch /opt/dev-project/tokyo.txt
+
 sudo -u berlin touch /opt/dev-project/berlin.txt
 
 ---
