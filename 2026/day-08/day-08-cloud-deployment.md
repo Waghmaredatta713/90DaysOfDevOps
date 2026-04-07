@@ -52,7 +52,6 @@ Local Machine → SSH → EC2 Instance → Install Docker & Nginx → Open Ports
 chmod 400 your-key.pem
 ssh -i your-key.pem ubuntu@<your-public-ip>
 
----
 
 ## 🔄 4. Update System
 
