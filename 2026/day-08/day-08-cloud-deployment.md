@@ -28,7 +28,7 @@ Local Machine → SSH → EC2 Instance → Install Docker & Nginx → Open Ports
 - Key Pair: `.pem` file  
 
 ### 📸 EC2 Instance Running
-![EC2 Instance](images/aws-ec2-running-instance-josh-batch.png)
+![EC2](images/aws-ec2-running-instance-josh-batch.png)
 
 ---
 
@@ -50,7 +50,3 @@ Local Machine → SSH → EC2 Instance → Install Docker & Nginx → Open Ports
 ```bash
 chmod 400 your-key.pem
 ssh -i your-key.pem ubuntu@100.28.127.7
-
----
-
-# 🚀 Day 08 – Cloud Server Setup: Docker, Nginx & Web Deployment
