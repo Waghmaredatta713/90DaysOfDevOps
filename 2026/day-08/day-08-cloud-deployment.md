@@ -18,7 +18,6 @@ This project demonstrates how to deploy a production-ready web server on AWS EC2
 ## 🏗️ Architecture Workflow
 Local Machine → SSH → EC2 Instance → Install Docker & Nginx → Open Ports → Deploy Website → Access via Browser
 
-
 ---
 
 ## ⚙️ 1. Launch EC2 Instance
@@ -50,54 +49,4 @@ Local Machine → SSH → EC2 Instance → Install Docker & Nginx → Open Ports
 
 ```bash
 chmod 400 your-key.pem
-ssh -i your-key.pem ubuntu@<your-public-ip>
-
----
-
-## 📌 Overview
-This project demonstrates how to deploy a production-ready web server on AWS EC2, configure Nginx, manage firewall rules, and monitor logs — essential DevOps skills used in real-world environments.
-
----
-🐳 5. Install Docker
-
-```bash
-sudo apt install docker.io -y
-sudo systemctl start docker
-sudo systemctl enable docker
-docker --version
-
-![Installation Docker](images/docker-installation-and-version-check.png)
----
-
-🌐 6. Install & Start Nginx
-
-```bash
-sudo apt install nginx -y
-sudo systemctl start nginx
-sudo systemctl enable nginx
-sudo systemctl status nginx
-
-![Installation Nginx and Status](images/nginx-installation-and-service-status.png)
-
----
-
-```bash
-cd /var/www/html/
-sudo nano index.html
-
----
-Restart Nginx:
-
-```bash
-sudo systemctl restart nginx
-
----
-
-🌍 8. Access Website
-Open browser:
-
-```bash
-http://100.28.127.7:80/
-
-![Live Website](images/datta-path-lab-website-homepage.png)
-
+ssh -i your-key.pem ubuntu@100.28.127.7:80
