@@ -52,36 +52,60 @@ ssh -i your-key.pem ubuntu@100.28.127.7
 ----
 
 
-🔄 4. Update System
-sudo apt update && sudo apt upgrade -y
+## 🔄 4. Update System
 
-🐳 5. Install Docker
+## sudo apt update && sudo apt upgrade -y
 
-sudo apt install docker.io -y
-sudo systemctl start docker
-sudo systemctl enable docker
-docker --version
-📸 Docker Installation
 
-🌐 6. Install & Start Nginx
+## 🐳 5. Install Docker
 
-sudo apt install nginx -y
-sudo systemctl start nginx
-sudo systemctl enable nginx
-sudo systemctl status nginx
-📸 Nginx Status
 
-🚀 7. Deploy Website
+## sudo apt install docker.io -y
 
-cd /var/www/html/
-sudo nano index.html
-Restart Nginx
-sudo systemctl restart nginx
+## sudo systemctl start docker
 
-🌍 8. Access Website
+## sudo systemctl enable docker
 
-Open in browser:
-http://100.28.127.7
+## docker --version
 
-📸 Live Website
+### 📸 Docker
+![Docker](images/docker-installation-and-version-check.png)
+
+
+
+## 🌐 6. Install & Start Nginx
+
+
+## sudo apt install nginx -y
+
+## sudo systemctl start nginx
+
+## sudo systemctl enable nginx
+
+## sudo systemctl status nginx
+
+
+![Nginx](images/nginx-installation-and-service-status.png)
+
+
+## 🚀 7. Deploy Website
+
+## cd /var/www/html/
+
+## sudo vim index.html
+
+
+## Restart Nginx
+
+## sudo systemctl restart nginx
+
+
+## 🌍 8. Access Website
+
+## Open in browser:
+
+## http://100.28.127.7
+
+![Live(images/datta-path-lab-website-homepage.png)
+
 
