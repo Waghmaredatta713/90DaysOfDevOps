@@ -51,6 +51,10 @@ chmod 400 your-key.pem
 ssh -i your-key.pem ubuntu@100.28.127.7
 ----
 
+
 🔄 4. Update System
+
+'''bash
+
 sudo apt update && sudo apt upgrade -y
 
