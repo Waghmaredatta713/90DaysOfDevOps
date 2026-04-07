@@ -50,3 +50,31 @@ Local Machine → SSH → EC2 Instance → Install Docker & Nginx → Open Ports
 ```bash
 chmod 400 your-key.pem
 ssh -i your-key.pem ubuntu@100.28.127.7:80
+
+🔄 4. Update System
+sudo apt update && sudo apt upgrade -y
+🐳 5. Install Docker
+sudo apt install docker.io -y
+sudo systemctl start docker
+sudo systemctl enable docker
+docker --version
+📸 Docker Installation
+
+🌐 6. Install & Start Nginx
+sudo apt install nginx -y
+sudo systemctl start nginx
+sudo systemctl enable nginx
+sudo systemctl status nginx
+📸 Nginx Status
+
+🚀 7. Deploy Website
+cd /var/www/html/
+sudo nano index.html
+Restart Nginx
+sudo systemctl restart nginx
+🌍 8. Access Website
+
+Open in browser:
+
+http://100.28.127.7
+📸 Live Website
