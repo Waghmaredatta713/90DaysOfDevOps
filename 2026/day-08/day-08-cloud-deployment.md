@@ -52,11 +52,10 @@ Local Machine → SSH → EC2 Instance → Install Docker & Nginx → Open Ports
 chmod 400 your-key.pem
 ssh -i your-key.pem ubuntu@<your-public-ip>
 
+---
 
-## 🔄 4. Update System
-
-```bash
-sudo apt update && sudo apt upgrade -y
+## 📌 Overview
+This project demonstrates how to deploy a production-ready web server on AWS EC2, configure Nginx, manage firewall rules, and monitor logs — essential DevOps skills used in real-world environments.
 
 ---
 🐳 5. Install Docker
