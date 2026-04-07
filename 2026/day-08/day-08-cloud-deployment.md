@@ -68,7 +68,7 @@ sudo systemctl start docker
 sudo systemctl enable docker
 docker --version
 
-📸 Docker Installation
+![Installation Docker](images/docker-installation-and-version-check.png)
 ---
 
 🌐 6. Install & Start Nginx
@@ -79,7 +79,7 @@ sudo systemctl start nginx
 sudo systemctl enable nginx
 sudo systemctl status nginx
 
-📸 Nginx Service Status
+![Installation Nginx and Status](images/nginx-installation-and-service-status.png)
 
 ---
 
@@ -100,4 +100,6 @@ Open browser:
 
 ```bash
 http://100.28.127.7:80/
+
+![Live Website](images/datta-path-lab-website-homepage.png)
 
