@@ -47,7 +47,7 @@ Practice real-world Linux user and group management:
 ## ⚙️ Commands Used
 
 ### 🔹 Create Users
-```bash
+
 sudo useradd -m tokyo
 sudo passwd tokyo
 
@@ -57,26 +57,31 @@ sudo passwd berlin
 sudo useradd -m professor
 sudo passwd professor
 
+---
 
 ### 🔹 Verify Users
-```bash
+
 cat /etc/passwd | grep tokyo
 ls /home
 
+---
 
 ### 🔹 Create Groups
-```bash
+
 sudo groupadd developers
 sudo groupadd admins
 
+---
 
 ### 🔹 Verify Groups
-```bash
+
 cat /etc/group | grep developers
+
+---
 
 
 ### 🔹 Assign Users to Groups
-```bash
+
 sudo usermod -aG developers tokyo
 
 sudo usermod -aG developers berlin
@@ -84,28 +89,33 @@ sudo usermod -aG admins berlin
 
 sudo usermod -aG admins professor
 
+---
 
 ### 🔹 Verify Group Membership
-```bash
+
 groups tokyo
 groups berlin
 groups professor
 
+---
+
 ### 🔹 Create Shared Directory
-```bash
+
 sudo mkdir -p /opt/dev-project
 sudo chgrp developers /opt/dev-project
 sudo chmod 775 /opt/dev-project
 
+---
 
 ### 🔹 Test Shared Access
-```bash
+
 sudo -u tokyo touch /opt/dev-project/tokyo.txt
 sudo -u berlin touch /opt/dev-project/berlin.txt
 
+---
 
 ### 🔹 Team Workspace Setup
-```bash
+
 sudo useradd -m nairobi
 sudo passwd nairobi
 
@@ -118,7 +128,10 @@ sudo mkdir -p /opt/team-workspace
 sudo chgrp project-team /opt/team-workspace
 sudo chmod 775 /opt/team-workspace
 
+---
 
 ### 🔹 Final Test
-```bash
+
 sudo -u nairobi touch /opt/team-workspace/test.txt
+
+---
