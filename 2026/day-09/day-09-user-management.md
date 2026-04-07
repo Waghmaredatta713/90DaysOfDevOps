@@ -17,10 +17,16 @@ Practice real-world Linux user and group management:
 - professor
 - nairobi
 
+### 📸 Users Created
+![Users-Groups](images/user-creation-verification.png)
+
 ### Groups
 - developers
 - admins
 - project-team
+
+### 📸 Groups Created
+![Users-Groups](images/group-creation-verification.png)
 
 ---
 
@@ -32,6 +38,9 @@ Practice real-world Linux user and group management:
 | berlin     | developers, admins          |
 | professor  | admins                      |
 | nairobi    | project-team                |
+
+### 📸 Group Assignments
+![Users-Groups](images/group-assignment-verification.png)
 
 ---
 
