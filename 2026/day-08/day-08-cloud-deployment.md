@@ -111,7 +111,6 @@ sudo systemctl restart nginx
 Open in browser:
 
 ## http://100.28.127.7
-
-![Access Website(images/datta-path-lab-website-homepage.png)
+![Live Website](images/datta-path-lab-website-homepage.png)
 
 
