@@ -143,8 +143,8 @@ Linux file system hierarchy and  Scenario Based questions and answers practice
 - `/home`  → Home directories for normal users
 - `/root`  → Home directory of root user
 - `/var`  → Variable data (logs, cache, service data)
-    - `/var/log`  → System & application logs
-    - `/var/lib`  → App data (e.g., Docker, DBs)
+- `/var/log`  → System & application logs
+- `/var/lib`  → App data (e.g., Docker, DBs)
 
 - `/tmp`  → Temporary files (often cleared on reboot)
 - `/usr`  → User programs & libraries (`/usr/bin` , `/usr/lib` )
@@ -260,7 +260,7 @@ Completed hands on exercises for above and committed in the github
 
 
 
-![image.png](https://eraser.imgix.net/workspaces/IbttGkhddthBGGWsAQER/wT5AjlQjuoRNZa07dGqXHOM5M9s2/image_OtgvJqWZnXuAa6kpSZzRd.png?ixlib=js-3.8.0 "image.png")
+
 
 ### Task 2: Create Groups (10 minutes)
 Create two groups:
@@ -285,7 +285,6 @@ ubuntu@ip-172-31-2-199:/$
 2. Set group owner to `developers` 
 3. Set permissions to `775`  (rwxrwxr-x)
 4. Test by creating files as `tokyo`  and `berlin` 
-![image.png](https://eraser.imgix.net/workspaces/IbttGkhddthBGGWsAQER/wT5AjlQjuoRNZa07dGqXHOM5M9s2/image_9kNSoMXIq8ozvVGshF5H5.png?ixlib=js-3.8.0 "image.png")
 
 
 
