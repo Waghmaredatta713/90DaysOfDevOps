@@ -35,8 +35,7 @@ head -n 5 /etc/passwd or cat /etc/passwd | head -n 5
 tail -n 5 /etc/passwd r cat /etc/passwd | tail -n 5
 ```
 ---
-![task 1 and 2](<img width="1549" height="544" alt="file-creation-and-reading" src="https://github.com/user-attachments/assets/eb917dc0-dc04-4f54-bf4c-25170cabe4b1" />
-)
+![Task1&2](images/user-creation-verification.png)
 ---
 
 ## Task 3: Understand Permissions
@@ -61,7 +60,7 @@ ls -l
 ```
 ---
 
-
+![task3&4](images/permissions-and-testing.png)
 ---
 
 ## Task 5: Test Permissions
