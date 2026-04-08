@@ -36,7 +36,7 @@ tail -n 5 /etc/passwd r cat /etc/passwd | tail -n 5
 ```
 ---
 
-![Task1&2](images/user-creation-verification.png)
+![task3&4](images/permissions-and-testing.png)
 ---
 
 ## Task 3: Understand Permissions
