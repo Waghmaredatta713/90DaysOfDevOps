@@ -59,7 +59,7 @@ vgs
 lvs
 df -h
 ```
-![task1](image/02-check-storage-lsblk.png)
+![task](images/02-check-storage-lsblk.png)
 
 **Observation:**
 nvme0n1 → OS disk (DO NOT USE)
@@ -91,7 +91,7 @@ vgs
 lvcreate -L 500M -n app-data devops-vg
 lvs
 ```
-![task2](image/03-create-pv-vg-lv.png)
+![task](images/03-create-pv-vg-lv.png)
 
 ---
 
@@ -104,7 +104,7 @@ mkdir -p /mnt/app-data
 mount /dev/devops-vg/app-data /mnt/app-data
 df -h /mnt/app-data
 ```
-![task2](image/04-format-and-mount.png)
+![task](images/04-format-and-mount.png)
 
 ---
 
@@ -116,7 +116,8 @@ lvextend -L +200M /dev/devops-vg/app-data
 resize2fs /dev/devops-vg/app-data
 df -h /mnt/app-data
 ```
-![task2](image/05-extend-logical-volume.png)
+![task](images/05-extend-logical-volume.png)
+
 ---
 
 ## Key Learnings
