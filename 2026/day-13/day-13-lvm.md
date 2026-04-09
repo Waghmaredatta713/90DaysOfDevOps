@@ -17,13 +17,13 @@ df -h      # Show mounted filesystems and their usage
 
 ### 2. Create Physical Volume
 ```bash
-pvcreate /dev/nvme1n1   # Initialize /dev/nvme1n1 as a physical volume for LVM
+pvcreate /dev/loop6   # Initialize /dev/nvme1n1 as a physical volume for LVM
 pvs                      # Verify physical volume creation
 ```
 
 ### 3. Create Volume Group
 ```bash
-vgcreate devops-vg /dev/nvme1n1   # Create a volume group named devops-vg
+vgcreate devops-vg /dev/loop6   # Create a volume group named devops-vg
 vgs                                # Verify volume group creation
 ```
 
@@ -62,7 +62,9 @@ df -h
 ![task](images/02-check-storage-lsblk.png)
 
 **Observation:**
+
 nvme0n1 → OS disk (DO NOT USE)
+
 loop6 → Virtual disk (used for LVM)
 
 ---
