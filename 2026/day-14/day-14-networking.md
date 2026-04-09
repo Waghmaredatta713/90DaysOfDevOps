@@ -44,7 +44,7 @@
 
 - **Reachability:** `ping -c 4 google.com`
 - Reachability: google.com (0% packet loss).
-- Observation: Excellent network connectivity with ~1ms latency**
+- Observation: Excellent network connectivity with ~1.74ms latency**
   ![Ping](images/ping.png)
 
 - **Path:** `traceroute gogle.com`
