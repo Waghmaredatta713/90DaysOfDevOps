@@ -58,7 +58,7 @@ Build on Day 14 by understanding the building blocks of networking every DevOps 
 
 ### 4.Run: ip addr show
 - Command: `ip addr show`  
-- Example private IP: `172.17.0.1`
+- Example private IP: `inet 172.17.0.1/16`
 
  ![ip addr](images/ip_addr.png)
 
@@ -67,8 +67,8 @@ Build on Day 14 by understanding the building blocks of networking every DevOps 
 ## Task 3: CIDR & Subnetting
 
 ### 1. What does `/24` mean in `192.168.1.0/24`?
-- CIDR notation specifies **network bits**.  
-- `/24` → 24 bits for network, 8 bits for host.  
+- 24 bits = **network portion**
+Remaining 8 bits = host portion
 
 ### 2. Usable hosts in different subnets
 Formula: `Usable Hosts = 2^(32 - CIDR) - 2`  
@@ -81,11 +81,15 @@ Formula: `Usable Hosts = 2^(32 - CIDR) - 2`
 
 ### 3. Why subnet?
 - To divide a large network into smaller, manageable networks.
+- Improves network management
+- Enhances security
+- Reduces broadcast traffic
+- Efficient IP utilization
 
 ### 4. Quick Reference Table
 
 | CIDR | Subnet Mask       | Total IPs | Usable Hosts |
-| ---- | ---------------- | --------- | ------------ |
+| ---- | ---------------- | --------- | ------------  |
 | /24  | 255.255.255.0     | 256       | 254          |
 | /16  | 255.255.0.0       | 65,536    | 65,534       |
 | /28  | 255.255.255.240   | 16        | 14           |
@@ -95,9 +99,10 @@ Formula: `Usable Hosts = 2^(32 - CIDR) - 2`
 ## Task 4: Ports – The Doors to Services
 
 ### 1. What is a port? Why do we need them?
-- **Port**: Virtual endpoint to direct data to the correct application.  
-- Multiple services can run on a single device; ports help route data correctly.  
-- Examples: HTTP → 80, SSH → 22, MySQL → 3306.
+- Logical communication endpoint
+- Allows multiple services on one system
+- Works with IP + protocol to route traffic
+- Examples: HTTP → 80, SSH → 22, MySQL → 3306
 
 ### 2. Common Ports
 
@@ -122,10 +127,12 @@ Formula: `Usable Hosts = 2^(32 - CIDR) - 2`
 ## Task 5: Putting It Together
 
 ### 1. `curl http://myapp.com:8080` – networking concepts involved
-- **DNS**: Resolve `myapp.com` → IP  
-- **TCP**: Reliable transport layer  
-- **HTTP**: Application protocol  
-- **Port 8080**: Directs request to specific service  
+**Involves:**
+
+**DNS** → domain to IP resolution
+**TCP** → connection establishment
+**HTTP** → request/response protocol
+**Port 8080** → specific service routing  
 
 ### 2. Database connectivity issue
 If app can't reach `10.0.1.50:3306`:
