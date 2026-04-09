@@ -2,8 +2,7 @@
 
  What is your understanding of DevOps and Cloud Engineering?
  >>
- DevOps - DevOps = developers and operations people working together smoothly.
- Before DevOps:
+DevOps is a way of working where development and operations teams work together to deliver software faster and safely. It helps in automation, reducing errors, and making systems stable. Cloud Engineering means using cloud platforms like AWS to run applications and manage servers instead of physical machines. It helps in scaling systems easily and managing infrastructure better. I understand that DevOps is not only about tools. It is about culture, mindset, communication, automation, and continuous learning.
 
 ```
 A DevOps engineer:
@@ -16,40 +15,72 @@ Helps teams release new features faster
 
 # **DAY -02**
 ```
-The core components of Linux (kernel, user space, init/systemd)
->>  Kernel >> is the heart of the linux OS
-Its a Onion like structure ASK outermost layer is like below
- application > Shell > kernel > Hradware
+Linux Architecture:
+
+Users / Applications - These are people or systems interacting with Linux. (Example - You typing commands)
+
+    |
+    |
+
+Shell - The shell is the bridge between user and kernel. (Example - bash)
+
+    |
+    |
+
+Kernel - Heart of Linux (Brain). Only kernel knows how to talk to hardware.
+
+    |
+    |
+
+Hardware - Physical devices. (Example - CPU, RAM, Disk)
+
+===================================================================================================================================================
+
+Flow:
+
+User/App → Shell → Kernel → Hardware → Kernel → Shell → Output
+
+Kernel (Core of Linux):
+
+The kernel is the heart of Linux. It talks directly to hardware. kernel manages- CPU Management, Memory Management, Disk Management, Network Management, Processes Management Without kernel, system cannot run.
+
 ```
 ```
-How processes are created and managed
->> process is a set of instruction loaded in memory
-    ps-ef > to list all the process running 
-    ps    > to report a snapshot of current process
+How a Process is Created:
+
+In Linux, a process is created using two main system calls:
+
+fork() → creates a new child process
+
+exec() → loads and runs the actual program inside that process
 ```
 ```
 Process States
-D>  means I/O wait is there on disk or uninteruptable sleep
-R>  running or ready to run
-S>  sleeping or it is waiting for event to complete / not getting resources now
-     / uniteruptable sleep you can not kill sleeping process arbitrarily
-T> stoppped
-Z> zombie process or defunct process
-    a process which execution is completed but its entry is still present 
-    in process table and these processes contribute to load
+A process does not always run continuously. It moves between different states:
+
+Running (R) → Using CPU
+
+Sleeping (S) → Waiting for input or resource
+
+Stopped (T) → Paused manually
+
+Zombie (Z) → Finished execution but not cleaned up by parent
 ```
 ```
 - What systemd does and why it matters
 >> systemd >> first process which is having PID1
 
-    systemd will decide which process will get start while booting servers
-    and it is started directly by the kernel.
-    due to systemd booot time is very less
+systemd is the manager of your Linux system. When the system starts, systemd is the first process that runs (PID 1). From that moment, it controls all services.
 
-    RHEL 5,6 were having init > first process having PID1 RHEL 5,6 were having high boot time
+Starts services at boot
 
-    systemd features >
-    Parallelization , logging,Dependencies
+Stops and restarts services
+
+Manages service dependencies
+
+Collects logs
+
+Monitors service health
 ```
 ---
 
@@ -74,7 +105,7 @@ rmdir   >   remove empty directory
 we practiced process commands and observed outputs
 
 ```
-2 process commands** (`ps`, `top`,
+3 process commands** (`ps`, `top` 'ps aux',
 >>>>OutPut for TOP Command top - display Linux processes | htop -
 
 >>>>2 service commands** (`systemctl status <service name>, `systemctl list-units`,
