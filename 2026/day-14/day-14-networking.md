@@ -39,7 +39,7 @@
 
 ## Hands-on Checklist 
 - **Identity:** `hostname -I` (or `ip addr show`)
-- Observation: EC2 instance private IP is 172.31.31.198 (internal AWS VPC network).
+- Observation: EC2 instance private IP is 172.31.74.169 (internal AWS VPC network).
   ![Hostname](images/hostname.png)
 
 - **Reachability:** `ping -c 4 google.com`
