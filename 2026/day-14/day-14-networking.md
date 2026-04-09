@@ -57,7 +57,7 @@
 
 
 - **Name resolution:** `dig google.com`
-- Observation: The DNS query returned status: NOERROR and successfully resolved google.com to 6 IP addresses: 192.178.218.100,192.178.218.138,192.178.218.113,192.178.218.139,192.178.218.102 and 192.178.218.101
+- Observation: The DNS query returned status: NOERROR and successfully resolved google.com to 6 IP addresses: 172.253.139.101, 172.253.139.100, 172.253.139.102, 172.253.139.113, 172.253.139.138    and 172.253.139.139
   ![dig](images/dig.png)
 
 
