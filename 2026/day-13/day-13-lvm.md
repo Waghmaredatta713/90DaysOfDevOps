@@ -73,7 +73,7 @@ loop6 → Virtual disk (used for LVM)
 
 **Command:**
 ```bash
-pvcreate /dev/nvme1n1
+pvcreate /dev/loop6
 pvs
 ```
 
@@ -81,7 +81,7 @@ pvs
 
 **Command:**
 ```bash
-vgcreate devops-vg /dev/nvme1n1
+vgcreate devops-vg /dev/loop6
 vgs
 ```
 ---
