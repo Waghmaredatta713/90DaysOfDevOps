@@ -1,4 +1,5 @@
-# Quick Concepts
+# Day 14 – Networking Fundamentals & Hands-on Checks
+
 
 ## OSI vs TCP/IP Model
 
