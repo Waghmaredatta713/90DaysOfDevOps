@@ -13,7 +13,7 @@
 4. Make it executable and run it
 
 ![hello scripts](imags/hello.png)
-![hello scripts](https://raw.githubusercontent.com/Waghmaredatta713/90DaysOfDevOps/master/2026/day-16/images/hello.png)
+
 * What happens if you remove the shebang line?
  - The script runs after removing shebang line :
     - `./hello.sh` - The kernel checks for a shebang to identify the interpreter.If no shebang is found, the script is executed using the current shell.
