@@ -12,7 +12,7 @@
 3. Print `Hello, DevOps!` using `echo`
 4. Make it executable and run it
 
-![script](images/hello.png)
+![/hello Scripts](images/hello.png)
 
 * What happens if you remove the shebang line?
  - The script runs after removing shebang line :
@@ -32,7 +32,7 @@
  * Using double quote `" "` - Allow **variable expansion**
  * Using single quote `' '` - Treat every character exactly as written
 
-![Script](images/variables.png)
+![Variables Script](images/variables.png)
 
 
 
