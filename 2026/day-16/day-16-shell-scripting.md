@@ -12,7 +12,7 @@
 3. Print `Hello, DevOps!` using `echo`
 4. Make it executable and run it
 
-![ hello Scripts](images/hello.png)
+![hello scripts](images/hello.png)
 
 * What happens if you remove the shebang line?
  - The script runs after removing shebang line :
