@@ -12,7 +12,7 @@
 3. Print `Hello, DevOps!` using `echo`
 4. Make it executable and run it
 
-![hello scripts](images/hello.png)
+![hello scripts](imags/hello.png)
 
 * What happens if you remove the shebang line?
  - The script runs after removing shebang line :
@@ -32,8 +32,7 @@
  * Using double quote `" "` - Allow **variable expansion**
  * Using single quote `' '` - Treat every character exactly as written
 
-![Variables Script](images/variables.png)
-
+![Variables scripts](imags/variables.png)
 
 
 ---
@@ -44,7 +43,7 @@
    - Asks for their favourite tool
    - Prints: `Hello <name>, your favourite tool is <tool>`
 
-![Script](images/greet.png)
+![Greet Script](imags/greet.png)
 
 ---
 
@@ -53,7 +52,7 @@
    - Takes a number using `read`
    - Prints whether it is **positive**, **negative**, or **zero**
 
-![Script](images/check_number.png)
+![Check Script](imags/check_number.png)
 
 
 2. Create `file_check.sh` that:
@@ -61,7 +60,7 @@
    - Checks if the file **exists** using `-f`
    - Prints appropriate message
 
-![Script](images/file_check.png)
+![File Script](imags/file_check.png)
 
 
 ---
@@ -73,7 +72,7 @@ Create `server_check.sh` that:
 3. If `y` — runs `systemctl status <service>` and prints whether it's **active** or **not**
 4. If `n` — prints "Skipped."
 
-![Script](images/server_check.png)
+![Server Script](imags/server_check.png)
 
 
 ## What I learned -
