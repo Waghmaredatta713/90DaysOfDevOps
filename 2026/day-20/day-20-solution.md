@@ -1,5 +1,12 @@
 # Day 20 – Bash Scripting Challenge: Log Analyzer and Report Generator
 
+# Task
+
+# You are a system administrator responsible for managing a network of servers. Every day, a log file is generated on each server containing important system events and error messages. Your job is to analyze these log files, identify specific events, and generate a summary report.
+
+# Write a Bash script (log_analyzer.sh) that automates the process of analyzing log files and generating a daily summary report.
+
+
 
 ## Challenge Tasks
 
@@ -11,7 +18,7 @@ Your script should:
 
    [Script](scripts/input_valid.sh)
    
-   ![images](images/log-generator-execution.png)
+   ![images](images/input_val.png)
 
 
 ---
@@ -22,7 +29,7 @@ Your script should:
 
    [Script](scripts/error_count.sh)
    
-   ![images](images/log-analyzer-processing-output.png)
+   ![images](images/error_count.png)
 
 ---
 
@@ -31,7 +38,7 @@ Your script should:
 2. Print those lines along with their line number
 
 
-   [Script](scripts/error_count.sh)
+   [Script](scripts/critical.sh)
    
    ![images](images/crict.png)
 
