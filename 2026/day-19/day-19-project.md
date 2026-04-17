@@ -10,7 +10,7 @@ Create `log_rotate.sh` that:
 
    [Script](scripts/log_rotate.sh)
    
-   ![images](images/log_rt.png)
+   ![images](images/log-rotation-output.png)
    
 ---
 
@@ -25,7 +25,7 @@ Create `backup.sh` that:
 
    [Script](scripts/backup.sh)
    
-   ![images](images/backup.png)
+   ![images](images/backup-script-output.png)
    
 ---
 
@@ -57,9 +57,10 @@ Create `maintenance.sh` that:
 
    [Script](scripts/maintenance.sh)
    
-   ![images](images/maintenance.png)
-   
-   
+    
+ ## Task 4: cron-service-status
+ 
+   ![images](images/cron-log-output.png)
    
 ---
 
