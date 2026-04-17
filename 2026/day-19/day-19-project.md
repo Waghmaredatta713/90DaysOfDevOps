@@ -44,7 +44,7 @@ Create `backup.sh` that:
 3. Cron entries for:
    - Run `log_rotate.sh` every day at 2 AM     : `0 2 * * *`
    - Run `backup.sh` every Sunday at 3 AM      : `0 3 * * 7`
-   - Run a health check script every 5 minutes : `*/5 * * * *`
+   - Run a health check script every 5 minutes : `*/1 * * * *`
 
 ---
 
