@@ -45,13 +45,15 @@
   - Configures Git username or email.
   - **Example**:
     ```bash
-        git config --global user.name "Your Name"   Example: user.name=Datta_Waghmare
-        git config --global user.email "Your Email" Example: user.email=waghmaredatta@email.com
+        git config --global user.name "Your Name"   
+        git config --global user.email "Your Email" 
      ```
   - View Config Values
     - **Example**:
       ```bash
         git config --list
+      Output:   Example: user.name=Datta_Waghmare
+                Example: user.email=waghmaredatta@email.com
       ```
 
 ## Basic Workflow
