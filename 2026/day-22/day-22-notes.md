@@ -45,13 +45,13 @@
   - Configures Git username or email.
   - **Example**:
     ```bash
-        git config --global user.name "Your Name"
-        git config --global user.email "Your Email"
+        git config --global user.name "Your Name"   Example: user.name=Datta_Waghmare
+        git config --global user.email "Your Email" Example: user.email=waghmaredatta@email.com
      ```
   - View Config Values
     - **Example**:
       ```bash
-        git config --global --list
+        git config --list
       ```
 
 ## Basic Workflow
@@ -61,13 +61,14 @@
   - **Example**:
       ```bash
       git add git-commands.md
+      git add datta.txt
       ```
 
   ### git commit
   - Save staged changes with a message explaining what you changed.
   - **Example**:
       ```bash
-      git commit -m "Add git commands reference"
+      git commit -m "this is my first commit"
       ```
 
   ## Viewing Changes
@@ -95,6 +96,7 @@
 
 ```bash
   git add git-command.md
+  git add datta.txt
   git status
   
   On branch master
@@ -102,8 +104,9 @@
       Changes to be committed:
         (use "git rm --cached <file>..." to unstage)
         new file: git-command.md
+        new file: datta.txt
         
-  git commmit -m "Initial git command reference"
+  git commmit -m "this is my first commit"
   
 ```
 
