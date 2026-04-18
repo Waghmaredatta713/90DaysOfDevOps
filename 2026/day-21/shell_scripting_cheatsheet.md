@@ -73,7 +73,7 @@
 - **Using**: Add `$` before the variable name to get its value.
 - **Example**:
     ```bash
-    echo $NAME # Prints Sanket
+    echo $NAME # Prints Datta
     ```
 - **Quoting**:
  - **Double quotes " "**: Variable is replaced with its value.
