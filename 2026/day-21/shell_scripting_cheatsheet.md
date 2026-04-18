@@ -1,3 +1,8 @@
+# Day 21 – Shell Scripting Cheat Sheet: Build Your Own Reference Guide
+# My personal cheat sheet
+
+
+
 | Topic           | Key Syntax              | Example                                       |
 | --------------- | ----------------------- | --------------------------------------------- |
 | Make Executable | `chmod +x file.sh`      | `chmod +x myapp.sh`                           |
